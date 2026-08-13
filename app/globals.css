@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&display=swap');
+@import "tailwindcss";
+
+/* Mirrors the :root tokens below into Tailwind's theme namespace (bg-bg-primary,
+   text-text-primary, rounded-card, ...) without renaming the existing vars that
+   inline styles across the app still read directly. */
+@theme {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-card: var(--bg-card);
+  --color-bg-sidebar: var(--bg-sidebar);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-hover: var(--border-hover);
+  --color-accent-blue: var(--accent-blue);
+
+  --radius-card: 12px;
+  --radius-button: 8px;
+
+  --shadow-subtle: 0 4px 20px -2px rgba(110, 108, 100, 0.04);
+  --shadow-focus: 0 0 0 3px rgba(28, 27, 24, 0.06);
+
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+/* Wrapped in Tailwind's "base" layer so utility classes (which live in the
+   higher-priority "utilities" layer) can always override these base element
+   resets — unlayered CSS otherwise beats any @layer'd CSS regardless of
+   specificity, which was silently overriding Tailwind's button/input/etc.
+   utilities. */
+@layer base {
+:root {
+  --bg-primary: #f4f3ec; /* warm neutral paper canvas background */
+  --bg-secondary: #eae8e0; /* slightly darker neutral background */
+  --bg-card: #ffffff; /* pure white cards */
+  --bg-sidebar: #ffffff; /* pure white sidebar */
+  --text-primary: #1c1b18; /* rich dark grey/black */
+  --text-secondary: #6e6c64; /* subtle charcoal */
+  --text-muted: #9c9a92; /* soft warm grey */
+  --border-subtle: #e5e3db; /* thin warm grey borders */
+  --border-hover: #c4c2ba; /* active border hover state */
+  --accent-blue: #3b82f6; /* dashboard blue */
+  --shadow-subtle: 0 4px 20px -2px rgba(110, 108, 100, 0.04);
+  --shadow-focus: 0 0 0 3px rgba(28, 27, 24, 0.06);
+  --radius-card: 12px;
+  --radius-button: 8px;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Form inputs & dropdowns */
+input, select, textarea {
+  font-family: var(--font-body);
+  font-size: 13px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-focus);
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+/* Referenced via Tailwind's arbitrary animate-[fadeIn_...] utility across the
+   dashboard tab components. */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+} /* end @layer base */
