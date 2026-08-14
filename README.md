@@ -157,7 +157,7 @@ For example:
 
 You can also use the full web dashboard if you prefer a visual interface.
 
-**👉 Live Dashboard:** fithub-dashboard.vercel.app
+👉 **[Open Live Dashboard](https://fithub-dashboard.vercel.app)**
 
 The dashboard gives you access to your:
 
