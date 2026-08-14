@@ -39,7 +39,7 @@
 ### 1. Install
 
 ```bash
-cd FitHub-Dashboard-0.1.0
+cd Workout-Dashboard
 npm install
 ```
 
