@@ -30,8 +30,7 @@ You can talk to it like you would talk to a personal trainer:
 
 The Custom GPT connects to your FitHub Coach dashboard, so you can interact with your workout history naturally instead of filling out forms every time.
 
-**👉 Ready-to-use Custom GPT:**
-`chatgpt.com/g/g-6a75ccc772dc819183897e74cd75e7ba-fithub-dashboard`
+👉 **[Ready-to-use Custom GPT](https://chatgpt.com/g/g-6a75ccc772dc819183897e74cd75e7ba-fithub-dashboard)**
 
 > **You don't need to set up anything if you just want to use the ready-made GPT.**
 
