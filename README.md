@@ -92,6 +92,7 @@ Set `FIREBASE_SERVICE_ACCOUNT` (a service-account JSON, collapsed to one line) t
 
 ## 🤖 ChatGPT Custom GPT Setup
 
+FOR EASINESS, HERE IS THE READY TO USE CUSTOM GPT : https://chatgpt.com/g/g-6a75ccc772dc819183897e74cd75e7ba-fithub-dashboard
 1. In ChatGPT: **Explore GPTs → Create → Configure → Actions**.
 2. **Import Schema** from `https://your-domain.com/api/openapi.json`.
 3. **Authentication → OAuth**:
